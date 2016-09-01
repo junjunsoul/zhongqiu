@@ -1,0 +1,70 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="viewport" content="width=device-width, minimum-scale=1.0, maximum-scale=1.0,user-scalable=no">
+    <title>中秋</title>
+    <link rel="stylesheet" href="css/style.css" />
+    <script src="js/islider.js"></script>
+    <script src="js/islider_desktop.js"></script>
+</head>
+
+<body>
+    <div id="iSlider-effect-wrapper">
+        <div id="animation-effect" class="iSlider-effect"></div>
+    </div>
+    <audio loop="" src="1.mp3" id="media" autoplay="" preload=""></audio>
+    <script>
+    var picList = [{
+        width: 666,
+        height: 888,
+        content: "images/1.png",
+    }, {
+        content: "images/2.png",
+    }, {
+        width: 150,
+        height: 207,
+        content: "images/3.png",
+    }, {
+        width: 150,
+        height: 207,
+        content: "images/5.png"
+    }, {
+        width: 150,
+        height: 207,
+        content: "images/6.png"
+    }, {
+        width: 300,
+        height: 414,
+        content: "images/7.png"
+    }, {
+        width: 150,
+        height: 207,
+        content: "images/8.png"
+    }, {
+        width: 150,
+        height: 207,
+        content: "images/9.png"
+    }, {
+        width: 150,
+        height: 207,
+        content: "images/10.png"
+    }];
+
+    //目前支持default, rotate, flip 和 depth,
+    var islider1 = new iSlider({
+        data: picList,
+        dom: document.getElementById("animation-effect"),
+        duration: 2000,
+        animateType: 'flip',
+        isAutoplay: false,
+        isLooping: true,
+        // isVertical: true, 是否垂直滚动
+    });
+    islider1.bindMouse();
+    </script>
+</body>
+
+</html>
